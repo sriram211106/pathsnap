@@ -1,7 +1,5 @@
 # PathSnap: Distributed Map-Matching & Route Reconstruction
 
-UE24CS352A Machine Learning hackathon, PES University (RR campus).
-
 PathSnap matches noisy GPS observations to a road network and reconstructs the route a vehicle actually drove.
 For every GPS point it generates nearby candidate road segments (arcs), scores each candidate with a trained
 classifier (LightGBM, tuned with Bayesian optimisation), and decodes the most likely **connected** route with an
@@ -139,9 +137,3 @@ Laptop 2 holds no model, no data and no ground truth: it only sends the trip ID 
   Viterbi decoding per segment.
 
 Results tables and figures: `outputs/comparison/`, `outputs/tuning/lgbm/`, `outputs/hmm/lgbm_tuned/`.
-
----
-
-## AI assistance
-
-*(Team: state here how AI tools were used, as required by the event policy.)*
