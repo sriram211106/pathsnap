@@ -1,0 +1,118 @@
+{
+  "created": "2026-11-18T16:29:43",
+  "model": "lgbm_tuned",
+  "model_type": "lgbm",
+  "params": {
+    "n_estimators": 300,
+    "learning_rate": 0.19189364171842493,
+    "num_leaves": 22,
+    "min_child_samples": 235,
+    "subsample": 0.9741449512038068,
+    "subsample_freq": 1,
+    "colsample_bytree": 0.680166375390576,
+    "reg_lambda": 3.6056860986820736,
+    "reg_alpha": 0.007621946573524703
+  },
+  "features": [
+    "dist_m",
+    "rank",
+    "dist_minus_min",
+    "dist_ratio",
+    "along_offset_m",
+    "proj_frac",
+    "arc_length_m",
+    "has_reverse",
+    "heading_diff",
+    "cos_heading_diff",
+    "heading_missing",
+    "speed_smooth_ms",
+    "heading_agree_weighted",
+    "conn_prev",
+    "conn_next",
+    "persist",
+    "win_mean_dist",
+    "progress_ratio",
+    "n_candidates",
+    "min_dist",
+    "dt",
+    "is_segment_start",
+    "is_fallback"
+  ],
+  "preprocess_config": {
+    "gap_split_s": 30.0,
+    "max_speed_ms": 70.0,
+    "stationary_speed_ms": 1.0,
+    "stationary_window": 5,
+    "heading_min_disp_m": 2.0
+  },
+  "candidate_config": {
+    "radius_m": 40.0,
+    "max_k": 30
+  },
+  "feature_config": {
+    "heading_span_m": 10.0,
+    "heading_min_disp_m": 5.0,
+    "progress_window": 10,
+    "persist_window": 5
+  },
+  "hmm_config": {
+    "beta_m": 5.0,
+    "emission_weight": 1.0,
+    "backtrack_tol_m": 10.0,
+    "cutoff_factor": 3.0,
+    "min_cutoff_m": 200.0,
+    "max_cutoff_m": 3000.0,
+    "disconnected_margin": 5.0,
+    "chosen_on": "train out-of-fold top-1",
+    "scores_from_model": "lgbm_tuned"
+  },
+  "metrics_summary": {
+    "cv_top1": {
+      "mean": 0.8749692506269231,
+      "std": 0.05196141529738986
+    },
+    "cv_macro_f1": {
+      "mean": 0.9290912176436578,
+      "std": 0.027711443189758347
+    },
+    "student_test_top1_classifier": 0.8832906496628861,
+    "hmm_summary": {
+      "model": "lgbm_tuned",
+      "chosen": {
+        "beta_m": 5.0,
+        "emission_weight": 1.0,
+        "backtrack_tol_m": 10.0,
+        "cutoff_factor": 3.0,
+        "min_cutoff_m": 200.0,
+        "max_cutoff_m": 3000.0,
+        "disconnected_margin": 5.0
+      },
+      "train": {
+        "clf_top1": 0.8776467666526298,
+        "hmm_top1": 0.9137108181356829,
+        "clf_continuity": 0.9387370586482355,
+        "hmm_continuity": 0.9758331971507397
+      },
+      "student_test": {
+        "clf_top1": 0.8832906496628861,
+        "hmm_top1": 0.9201379814979355,
+        "clf_continuity": 0.939729461534444,
+        "hmm_continuity": 0.9828693790149893,
+        "share_points_after_disconnected_step": 0.0014613778705636743
+      },
+      "seconds": {
+        "prepare_train": 44.7,
+        "prepare_student_test": 3.2,
+        "decode_student_test": 0.34
+      }
+    }
+  },
+  "library_versions": {
+    "lightgbm": "4.7.0",
+    "numpy": "2.5.5",
+    "pandas": "3.1.1",
+    "sklearn": "1.9.1",
+    "shapely": "2.2.0",
+    "pyproj": "3.8.0"
+  }
+}

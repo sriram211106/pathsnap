@@ -38,10 +38,15 @@ def main():
     ap.add_argument("--model", required=True, choices=list(MODEL_SPECS))
     ap.add_argument("--features", default="data/features")
     ap.add_argument("--out", default="outputs/models")
+    ap.add_argument("--params", default=None, help="JSON file with hyperparameters overriding the defaults")
+    ap.add_argument("--name", default=None, help="output folder name, e.g. lgbm_tuned")
     args = ap.parse_args()
     name, spec = args.model, MODEL_SPECS[args.model]
-    params = spec["params"]
-    out = Path(args.out) / name
+    params = dict(spec["params"])
+    if args.params:
+        params.update(json.loads(Path(args.params).read_text()))
+    run_name = args.name or name
+    out = Path(args.out) / run_name
     out.mkdir(parents=True, exist_ok=True)
     rng = np.random.default_rng(SEED)
     fcfg = TrainFilterConfig()
@@ -105,7 +110,8 @@ def main():
     test_m = evaluate(test, ts)
 
     metrics = {
-        "model": name, "family": spec["family"], "params": params, "seed": SEED, "n_folds": N_FOLDS,
+        "model": run_name, "model_type": name, "family": spec["family"], "params": params,
+        "params_source": args.params or "defaults in training.py", "seed": SEED, "n_folds": N_FOLDS,
         "max_train_rows": spec["max_train_rows"], "final_epochs": fixed, "features": FEATURES,
         "train_filter": fcfg.to_dict(), "machine": platform.node(),
         "cv_folds": folds, "cv": cv, "cv_oof_overall": oof_all, "student_test": test_m,

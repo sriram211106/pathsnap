@@ -1,0 +1,16 @@
+# data - never commit (raw, processed, features, evaluator)
+data/
+*.zip
+
+# Python / environments
+__pycache__/
+*.pyc
+.venv/
+.venv-ui/
+venv/
+.ipynb_checkpoints/
+
+# secrets
+.env
+
+outputs/models/*/model.joblib

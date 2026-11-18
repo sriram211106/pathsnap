@@ -1,0 +1,5 @@
+# Laptop 2 (UI only) - no ML libraries needed
+streamlit>=1.32
+streamlit-folium>=0.18
+folium>=0.15
+requests>=2.31

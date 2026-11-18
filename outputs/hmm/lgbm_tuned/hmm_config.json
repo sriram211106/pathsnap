@@ -1,0 +1,11 @@
+{
+  "beta_m": 5.0,
+  "emission_weight": 1.0,
+  "backtrack_tol_m": 10.0,
+  "cutoff_factor": 3.0,
+  "min_cutoff_m": 200.0,
+  "max_cutoff_m": 3000.0,
+  "disconnected_margin": 5.0,
+  "chosen_on": "train out-of-fold top-1",
+  "scores_from_model": "lgbm_tuned"
+}

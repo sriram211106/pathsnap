@@ -1,0 +1,34 @@
+{
+  "train": {
+    "nearest_arbitrary": {
+      "top1_accuracy": 0.5586040836599614,
+      "cv_fold_top1": [
+        0.6312,
+        0.5234,
+        0.5337,
+        0.5588,
+        0.5228
+      ],
+      "cv_mean": 0.5539856654242006
+    },
+    "nearest_heading": {
+      "top1_accuracy": 0.8248895943334089,
+      "cv_fold_top1": [
+        0.8476,
+        0.8398,
+        0.7441,
+        0.8566,
+        0.8199
+      ],
+      "cv_mean": 0.8215960003601694
+    }
+  },
+  "student_test": {
+    "nearest_arbitrary": {
+      "top1_accuracy": 0.5449223854074112
+    },
+    "nearest_heading": {
+      "top1_accuracy": 0.8295092248993885
+    }
+  }
+}

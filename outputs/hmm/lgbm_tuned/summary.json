@@ -1,0 +1,30 @@
+{
+  "model": "lgbm_tuned",
+  "chosen": {
+    "beta_m": 5.0,
+    "emission_weight": 1.0,
+    "backtrack_tol_m": 10.0,
+    "cutoff_factor": 3.0,
+    "min_cutoff_m": 200.0,
+    "max_cutoff_m": 3000.0,
+    "disconnected_margin": 5.0
+  },
+  "train": {
+    "clf_top1": 0.8776467666526298,
+    "hmm_top1": 0.9137108181356829,
+    "clf_continuity": 0.9387370586482355,
+    "hmm_continuity": 0.9758331971507397
+  },
+  "student_test": {
+    "clf_top1": 0.8832906496628861,
+    "hmm_top1": 0.9201379814979355,
+    "clf_continuity": 0.939729461534444,
+    "hmm_continuity": 0.9828693790149893,
+    "share_points_after_disconnected_step": 0.0014613778705636743
+  },
+  "seconds": {
+    "prepare_train": 44.7,
+    "prepare_student_test": 3.2,
+    "decode_student_test": 0.34
+  }
+}
