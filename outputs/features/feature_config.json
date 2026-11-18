@@ -1,0 +1,31 @@
+{
+  "heading_span_m": 10.0,
+  "heading_min_disp_m": 5.0,
+  "progress_window": 10,
+  "persist_window": 5,
+  "features": [
+    "dist_m",
+    "rank",
+    "dist_minus_min",
+    "dist_ratio",
+    "along_offset_m",
+    "proj_frac",
+    "arc_length_m",
+    "has_reverse",
+    "heading_diff",
+    "cos_heading_diff",
+    "heading_missing",
+    "speed_smooth_ms",
+    "heading_agree_weighted",
+    "conn_prev",
+    "conn_next",
+    "persist",
+    "win_mean_dist",
+    "progress_ratio",
+    "n_candidates",
+    "min_dist",
+    "dt",
+    "is_segment_start",
+    "is_fallback"
+  ]
+}

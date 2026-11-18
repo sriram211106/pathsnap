@@ -1,0 +1,7 @@
+{
+  "gap_split_s": 30.0,
+  "max_speed_ms": 70.0,
+  "stationary_speed_ms": 1.0,
+  "stationary_window": 5,
+  "heading_min_disp_m": 2.0
+}

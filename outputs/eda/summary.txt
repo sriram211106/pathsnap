@@ -1,0 +1,56 @@
+
+===== student_test: 10 trips =====
+                                min        50%       mean        max
+n_points                    262.000   1420.000   1916.000   3958.000
+duration_s                  265.000   1809.500   2025.000   4000.000
+track_length_km               5.547     20.936     29.697     71.716
+share_dt_eq_1                 0.861      0.999      0.982      1.000
+dt_max                        1.000      2.000     25.500    210.000
+n_gaps_gt_10s                 0.000      0.000      2.700     24.000
+speed_p99_ms                 24.238     33.865     32.954     41.627
+n_nodes                    1770.000   6596.500   9068.900  26635.000
+n_arcs                     3577.000  13145.000  18504.100  56027.000
+n_isolated_nodes              0.000      0.000      0.000      0.000
+n_weak_components             5.000     11.000     22.700    100.000
+share_arcs_with_reverse       0.855      0.933      0.927      0.996
+route_len_arcs               95.000    250.000    347.700   1323.000
+route_n_continuity_breaks     0.000      0.000      0.100      1.000
+gps_route_dist_p50_m          4.176      4.593      5.040      6.838
+gps_route_dist_p95_m         11.692     15.798     16.306     26.162
+points_per_route_arc          2.445      4.635      7.051     14.593
+                  n_nan_rows: 0 trips []
+            n_invalid_coords: 0 trips []
+            n_duplicate_rows: 0 trips []
+          n_non_increasing_t: 0 trips []
+         n_arcs_bad_node_ref: 0 trips []
+         route_n_bad_arc_ref: 0 trips []
+   route_n_continuity_breaks: 1 trips ['00000076']
+missing files: {'track': [], 'nodes': [], 'arcs': [], 'route': []}
+
+===== train: 80 trips =====
+                               min        50%       mean         max
+n_points                   361.000   1529.000   2605.212   19313.000
+duration_s                 451.000   1710.001   5680.404  154030.000
+track_length_km              6.334     24.066     37.230     169.254
+share_dt_eq_1                0.531      0.991      0.938       1.000
+dt_max                       1.000     11.000   2706.400  153064.000
+n_gaps_gt_10s                0.000      0.500      7.375     215.000
+speed_p99_ms                18.781     31.377     33.718      90.955
+n_nodes                    299.000   9608.000  24168.562  155003.000
+n_arcs                     649.000  19526.500  48461.300  307392.000
+n_isolated_nodes             0.000      0.000      0.000       0.000
+n_weak_components            1.000     20.000     39.012     421.000
+share_arcs_with_reverse      0.351      0.951      0.922       1.000
+route_len_arcs              59.000    280.000    391.700    2266.000
+route_n_continuity_breaks    0.000      0.000      0.162       3.000
+gps_route_dist_p50_m         3.448      4.503      8.079     138.588
+gps_route_dist_p95_m        10.345     14.212     23.740     242.357
+points_per_route_arc         1.261      5.289      8.276      56.978
+                  n_nan_rows: 0 trips []
+            n_invalid_coords: 0 trips []
+            n_duplicate_rows: 0 trips []
+          n_non_increasing_t: 0 trips []
+         n_arcs_bad_node_ref: 0 trips []
+         route_n_bad_arc_ref: 0 trips []
+   route_n_continuity_breaks: 10 trips ['00000002', '00000019', '00000033', '00000041', '00000042', '00000069', '00000075', '00000080', '00000086', '00000089']
+missing files: {'track': [], 'nodes': [], 'arcs': [], 'route': []}
